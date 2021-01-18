@@ -1,0 +1,104 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: index.php");
+        
+    }
+    $username = $_SESSION['username'];
+    include './includes/connect_db.php';
+    
+    $sql = "SELECT * FROM members WHERE username='$username'";
+    //echo $sal;
+    $result = mysqli_query($link, $sql);
+    
+    $row = mysqli_fetch_array($result);
+    $member2_id = $row[member2_id];
+    $name2 = $row[name2];
+    $topic = $row[topic];
+    $story = $row[story];
+    
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <style>
+            #member{
+                float: right;
+                margin-right: 10px;
+                clear: both;
+            }
+            
+        </style>
+            
+    </head>
+    <body>
+        
+        <div id="container">
+            <?php
+                include './includes/header.php';
+                include './includes/nav.php';
+            ?>
+            <div id="content">
+                <span style="font-size: 20px;color: blue;"> >>กระทู้ของคุณ</span>
+                
+                <div id="member">
+                    <?php 
+                                echo "Username: $username";
+
+                    ?>
+                    <a href="logout.php">logout</a>
+                </div>
+                
+                
+                 <div style="clear: both;"></div>
+                <form>
+                <table style="margin: auto; margin-top: 20px;">
+                    <tr>
+                        <td colspan="2" style="text-align: center; font-size: 25px; font-weight: bold; color: teal;">
+                            กระทู้ของคุณ
+                        </td>
+                        
+                        
+                    </tr>
+                  <tr>
+                        <th>ชื่อผู้โพสต์ :</th>
+                        <td><input type="text" name="name2" required value="<?php echo $name2; ?> "disabled></td>
+                    </tr>
+                     <tr>
+                        <th>หัวข้อกระทู้ :</th>
+                        <td><input type="text" name="surname"required  value="<?php echo $topic; ?> " disabled></td>
+                    </tr>
+                    <tr>
+                        <<th>เนื้อเรื่อง :</th>
+                        <td><textarea  name="story" cols="50px;" rows="10px;" required  value="<?php echo $story; ?> " disabled></textarea></td>
+                    </tr>       
+<!--                    <tr>
+                        <th>Password :</th>
+                        <td><input type="password" name="password" required ></td>
+
+                    </tr>-->
+                   
+
+                </table>
+                </form> 
+                
+                <br>
+                <br>
+                <br>
+                
+            </div>
+
+            <?php
+             include './includes/footer.php';
+            ?>
+              
+        </div>
+        <?php
+        $username = $_SESSION['username'];
+        //echo "Hello $username";
+        ?>
+    </body>
+</html>

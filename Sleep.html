@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="description" content="Mobile Application HTML5 Template">
+
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+
+  <title>Web Application For Physical Health Management</title>
+
+  <link rel="shortcut icon" href="../webapplication/iconn.png" type="image/x-icon">
+
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <style>
+      body {
+        font-family: 'Crimson Pro', serif;
+        font-size: 48px;
+      }
+    </style> 
+
+  <link rel="stylesheet" href="../webapplication/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../webapplication/vendor/owl-carousel/css/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="../webapplication/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../webapplication/css/mobster.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light navbar-floating">
+  <div class="container">
+    <a class="navbar-brand" href="index_member.php">
+      <img src="../webapplication/iconn.png" alt="" width="120">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-lg-5 mt-3 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index_member.php">หน้าหลัก</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="food_member.html">อาหาร</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Weight_control_member.html">ควบคุมน้ำหนัก</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">กระทู้</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Dashboard</a>
+        </li>
+      </ul>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="../webapplication/img/493fa0f13970ab3ef29375669f670451.png"  width="120"> <p>Hi, Guest!</p>
+    </div>
+  </div>
+</nav><br><br>
+<!--Box-->
+
+<div class="hero-caption pt-6">
+    <div class="container">
+        <div class="page-section bg-white fg-white">
+        <center> 
+                <a href="#" class="btn btn-outline-white" style="width:50%"><h5 align = 'left'><strong>การนอนหลับที่ดี<br></strong></h5><h6 align = 'left'>ไม่จำเป็นต้องนอน 8 ชั่วโมง แต่สามารถนอนได้อย่างเพียงพอมีคุณภาพ หรือนอนเพียงแค่ 5-6 ชั่วโมง ก็สามารถตื่นนอนขึ้นมาสดชื่นได้ เพราะนอนหลับลึกเพียงพอ และร่างกายต้องการเพียงพอ ก็สุขภาพดีได้</h6>
+                <a href="#" class="btn btn-white">
+        
+                <a href="#" class="btn btn-light" style="width: 22rem;" ><h5><strong>บันทึกการนอนหลับภายในวันนี้</strong></h5><br><h6>_______________ ชั่วโมง <br><br></h6>
+                <center>
+                  <div class="select">
+                   <select name="format" id="format">
+                      <option selected disabled>--Select Date--
+                      <option value="09 ส.ค. 2563">09 ส.ค. 2563</option>
+                      <option value="10 ส.ค. 2563">10 ส.ค. 2563</option>
+                      <option value="11 ส.ค. 2563">11 ส.ค. 2563</option>
+                      <option value="12 ส.ค. 2563">12 ส.ค. 2563</option>
+                      <option value="13 ส.ค. 2563">13 ส.ค. 2563</option>
+                      <option value="14 ส.ค. 2563">14 ส.ค. 2563</option>
+                      <option value="15 ส.ค. 2563">15 ส.ค. 2563</option>
+                   </select>
+                  </div>
+                </center>
+
+                <br><button class="btn btn-outline-dark">บันทึก</button>&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-dark">ยกเลิก</button><br><br>
+                <a href="#" class="btn btn-white"><br><br>
+<html>
+<head>
+   <title>กราฟแสดงการนอนภายในอาทิตย์นี้</title>
+   <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+   <script src="http://code.highcharts.com/highcharts.js"></script> 
+   <script src="http://code.highcharts.com/modules/data.js"></script>     
+</head>
+<body>
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+<script language="JavaScript">
+$(document).ready(function() { 
+   var data = {
+      table: 'datatable'
+   };
+   var chart = {
+      type: 'column'
+   };
+   var title = {
+      text: 'กราฟแสดงการนอนภายในอาทิตย์นี้'   
+   };      
+   var yAxis = {
+      allowDecimals: false,
+      title: {
+         text: 'การนอนหลับ'
+      }
+   };
+   var tooltip = {
+      formatter: function () {
+         return '<b>' + this.series.name + '</b><br/>' +
+            this.point.y + ' ' + this.point.name.toLowerCase();
+      }
+   };
+   var credits = {
+      enabled: false
+   };  
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title; 
+   json.data = data;
+   json.yAxis = yAxis;
+   json.credits = credits;  
+   json.tooltip = tooltip;  
+   $('#container').highcharts(json);
+});
+
+</script>
+<table id="datatable">
+<thead>
+<tr><th></th><th>Name</th></tr>
+</thead>
+<tbody>
+<tr><th>8 ส.ค.</th><td>6</td></tr>
+<tr><th>9 ส.ค.</th><td>5</td></tr>
+<tr><th>10 ส.ค.</th><td>5</td></tr>
+<tr><th>11 ส.ค.</th><td>8</td></tr>
+<tr><th>12 ส.ค.</th><td>6</td></tr>
+<tr><th>13 ส.ค.</th><td>7</td></tr>
+<tr><th>14 ส.ค.</th><td>6</td></tr>
+</tbody>
+</table>
+</body>
+</html>
