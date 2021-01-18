@@ -12,19 +12,12 @@
     <!-- Title Page-->
     <title>เข้าสู่ระบบ</title>
 
-    <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Vendor CSS-->
+    <link href="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-    
-
-    <!-- Main CSS-->
-    <link href="css/mainregister.css" rel="stylesheet" media="all">
+    <link href="css/main.css" rel="stylesheet" media="all">
 
 </head>
 
@@ -33,13 +26,13 @@
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">เข้าสู่ระบบ</h2>
+                    <h2 class="title"><font color=“#000000”> เข้าสู่ระบบ</font></h2>
                     <form method="POST">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label" for="username">ชื่อผู้ใช้ (เป็นภาษาอังกฤษ)/email</label>
-                                    <input class="input--style-4" type="text" name="username">
+                                    <label class="label" for="username">email</label>
+                                    <input class="input--style-4" autocomplete="off" type="email" id="email">
                                 </div>
                             </div>
                             
@@ -47,30 +40,44 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label" for="password">รหัสผ่าน</label>
+                                    <label class="label" for="password">password</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="password" name="password">
+                                        <input class="input--style-4 js-datepicker" required autocomplete="password" type="password" id="password">
                                         
                                     </div>
                                 </div>
                             </div>
-                            
-                       
-                           
-                        <br>
-                        <div class="p-t-15">
-                            <button type="submit" name="login_user" class="btn btn--radius-2 btn--blue">เข้าสู่ระบบ</button>
-                        </div>
-                        <p>Not yet a member ? <a href="register.html">สมัครสมาชิก</a></p>
-                                
-                            
-                        
-                
+                            <div class="p-t-15">
+                            <button onclick="login()" class="btn btn--radius-2 btn--blue">Login</button>
+                            </div>
+                            <p>Not yet a member ? <a href="register.html">สมัครสมาชิก</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+        
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyDb2zqOoWiOBwSSkg1fU0ThcYddPZ-0oPQ",
+        authDomain: "physical-health-management.firebaseapp.com",
+        databaseURL: "https://physical-health-management-default-rtdb.firebaseio.com",
+        projectId: "physical-health-management",
+        storageBucket: "physical-health-management.appspot.com",
+        messagingSenderId: "1072633341334",
+        appId: "1:1072633341334:web:746c76af60e9a877e769b7",
+        measurementId: "G-MYKSGW6BLD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="js/login.js"></script>
 
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
